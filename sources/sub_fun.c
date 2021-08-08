@@ -15,7 +15,7 @@
 int	error(int ale)
 {
 	if (ale == 1)
-		return (write(1, "Error\n", 7));
+		write(1, "Error\n", 7);
 	return (-1);
 }
 

@@ -94,10 +94,10 @@ int	check_data(t_pipex *data)
 {
 	data->fdin = open(data->in_f, O_RDWR);
 	if (data->fdin < 0)
-		return (error(1));
-	data->fdout = open(data->out_f, O_RDWR | O_TRUNC | O_CREAT);
+		return (-1);
+	data->fdout = open(data->out_f, O_RDWR | O_TRUNC);
 	if (data->fdout < 0)
-		return (error(1));
+		return (-1);
 	if (data->flag1 == 0)
 	{
 		if (!check_path(&data, &data->pathcmd1, data->cmd1[0]))

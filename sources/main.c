@@ -58,10 +58,10 @@ int	main(int argc, char **argv, char **envp)
 	t_pipex	*data;
 
 	if (argc != 5)
-		return (-1);
+		return (error(1));
 	data = malloc(sizeof(t_pipex));
 	if (!data)
-		return (-1);
+		return (error(1));
 	init_struct(data);
 	if (parse_data(&data, argv, envp) == -1)
 		return (error(1));
