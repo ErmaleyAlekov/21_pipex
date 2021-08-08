@@ -38,6 +38,7 @@ $(NAME): $(OBJ)
 	@gcc $(CFLAGS) $(INCLUDES) $(OBJ) -o $(NAME)
 $(OBJDIR)/%.o: $(DIRSRC)/%.c $(HEADERS) $(WAIT)
 	@mkdir -p $(OBJ_PATHS)
+	@./pro_bar
 	@gcc $(CFLAGS) $(INCLUDES) -c -o $@ $<
 $(WAIT):
 	@echo "$(GREEN)____________________________________________________________________"
